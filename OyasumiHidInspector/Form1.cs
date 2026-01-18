@@ -263,21 +263,9 @@ namespace OyasumiHidInspector
 
                                 if (!deviceInfos.ContainsKey(deviceId))
                                     deviceInfos[deviceId] = new DeviceInfo();
-
-                                deviceInfos[deviceId].SuspiciousIntervalCount++;
                                 deviceInfos[deviceId].LastKeyTime = DateTime.Now;
                                 deviceInfos[deviceId].DeviceId = deviceId;
                                 deviceInfos[deviceId].DevicePath = devicePath;
-
-                                if (deviceInfos[deviceId].SuspiciousIntervalCount > 3)
-                                {
-                                    BlockDevice(deviceId, devicePath, "Too fast typing!");
-                                }
-                            }
-                            else if (interval >= lim)
-                            {
-                                if (deviceInfos.ContainsKey(deviceId))
-                                    deviceInfos[deviceId].SuspiciousIntervalCount = 0;
                             }
 
                             AddLogEntry(logEntry);
@@ -671,7 +659,6 @@ namespace OyasumiHidInspector
                 foreach (var deviceInfo in deviceInfos.Values)
                 {
                     deviceInfo.IsBlocked = false;
-                    deviceInfo.SuspiciousIntervalCount = 0;
                 }
                 deviceBuffers.Clear();
 
@@ -1135,10 +1122,6 @@ namespace OyasumiHidInspector
             }
         }
 
-        private void btnToggleHotkeys_Click(object sender, EventArgs e)
-        {
-            _hotkeysEnabled = !_hotkeysEnabled;
-        }
     }
 
     public class DeviceInfo
@@ -1147,7 +1130,6 @@ namespace OyasumiHidInspector
         public string DevicePath { get; set; }
         public DateTime LastKeyTime { get; set; }
         public DateTime LastActivity { get; set; }
-        public int SuspiciousIntervalCount { get; set; }
         public bool IsBlocked { get; set; }
 
         public DeviceInfo()
