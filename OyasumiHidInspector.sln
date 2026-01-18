@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36414.22
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OyasumiHidInspector", "OyasumiHidInspector\OyasumiHidInspector.csproj", "{288362D4-537E-4727-AAB7-E864815F32C1}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{288362D4-537E-4727-AAB7-E864815F32C1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{288362D4-537E-4727-AAB7-E864815F32C1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{288362D4-537E-4727-AAB7-E864815F32C1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{288362D4-537E-4727-AAB7-E864815F32C1}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {19F00D9D-131B-4FEB-BDAF-5A1D3A39C4AA}
+	EndGlobalSection
+EndGlobal
